@@ -3,13 +3,13 @@ name: IBM Cloud Foundry - Xray
  
 env:
   IBM_CF_API: https://api.us-south.cf.cloud.ibm.com
-  IBM_CF_APP_MEM: 256M
+  IBM_CF_APP_MEM: 64M
 
 on:
   workflow_dispatch:
   repository_dispatch:
   #schedule:
-  #  - cron: 0 21 * * 5
+  #  - cron: 0 16 * * 1
 
 jobs:
   deploy:
@@ -69,7 +69,7 @@ jobs:
                 "clients": [
                   {
                     "id": "${V2_UUID}",
-                    "alterId": 64
+                    "alterId": 0
                   }
                 ]
               },
